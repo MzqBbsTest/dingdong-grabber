@@ -17,12 +17,12 @@ func ddMain(waitGroup *sync.WaitGroup) {
 	// 1. 加载全局配置: 根目录config.yaml，用户只需配置cookie参数，其余均是可循参数
 	m := config.Manager{}
 	if err := m.LoadConfig(); err != nil {
-		klog.Fatal()
+		klog.Fatal(err)
 	}
 
 	// 2. 初始化用户必须的参数数据
-	u := user.NewDefaultUser()
-	if err := u.LoadConfig(m.Conf.Config.Cookie); err != nil {
+	u := user.NewDefaultUser(m.Conf.Config)
+	if err := u.LoadConfig(); err != nil {
 		return
 	}
 
