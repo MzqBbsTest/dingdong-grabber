@@ -17,7 +17,7 @@ func newDefaultHeader() Header {
 	h.Host = "mall.meituan.com"
 	h.OpenId = ""
 	h.ContentType = "application/json"
-	h.Traceids = "5fc24523"
+	h.Traceids = "5c672788"
 	h.ReqOfMaicai = "1"
 	h.T = ""
 	h.UserAgent = "User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.20(0x18001428) NetType/4G Language/zh_CN"
